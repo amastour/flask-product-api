@@ -1,0 +1,26 @@
+version: "2.1"
+services:
+  app1:
+    container_name: demo_app1
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - CONFIG_TYPE=dev
+  app2:
+    container_name: demo_app2
+    build:
+      context: .
+    ports:
+      - "5001:5000"
+    environment:
+      - CONFIG_TYPE=dev
+  app3:
+    container_name: demo_app3
+    build:
+      context: .
+    ports:
+      - "5002:5000"
+    environment:
+      - DEBUG=True
